@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>Chính sách quyền riêng tư | GHN AutoOps</title>
+<style>
+:root{color-scheme:light}body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.75;color:#1c2937;background:#f4f7fb;margin:0}
+main{max-width:850px;margin:35px auto;padding:36px 42px;background:#fff;border-radius:16px;box-shadow:0 6px 24px #1b355011}
+h1,h2{line-height:1.3;color:#173c62}h1{font-size:30px}h2{font-size:20px;margin-top:30px}
+mark{background:#fff0d7;padding:2px 5px}a{color:#0d5d9b}header{border-bottom:3px solid #f68a28;padding-bottom:15px}
+small{color:#64748b}li{margin:6px 0}@media(max-width:700px){main{margin:0;padding:24px 20px;border-radius:0}}
+</style>
+</head>
+<body><main>
+<header>
+<h1>Chính sách quyền riêng tư — GHN AutoOps</h1>
+<p><strong>Phiên bản tiện ích:</strong> 2.5.10<br><strong>Ngày cập nhật:</strong> 06/11/2026</p>
+<p>GHN AutoOps là tiện ích Chrome độc lập hỗ trợ tự động hóa thao tác bắn kiểm và xử lý phiếu thu trên hệ thống GHN. Tiện ích không phải sản phẩm chính thức và không được GHN tài trợ hay chứng thực.</p>
+</header>
+<h2>1. Phạm vi và mục đích</h2>
+<p>Chính sách này mô tả thông tin được GHN AutoOps truy cập, xử lý hoặc lưu khi người dùng đăng nhập, kiểm tra quyền sử dụng và chủ động chạy các chức năng tự động hóa.</p>
+<h2>2. Thông tin được xử lý</h2>
+<ul>
+<li><strong>Thông tin tài khoản:</strong> địa chỉ email và thông tin phiên đăng nhập liên quan đến xác thực Google thông qua Supabase.</li>
+<li><strong>Thông tin xác thực:</strong> access token, refresh token và thời điểm hết hạn phiên, phục vụ duy trì đăng nhập và gọi API bản quyền.</li>
+<li><strong>Thông tin bản quyền và lượt sử dụng:</strong> gói Free/PRO, hạn mức, trạng thái và mã định danh thao tác để kiểm tra, ghi nhận và khôi phục trạng thái sử dụng.</li>
+<li><strong>Dữ liệu nghiệp vụ GHN:</strong> thông tin chuyến, mã đơn, phiếu thu, trạng thái xử lý và dữ liệu hiển thị cần thiết trên trang GHN để thực hiện thao tác do người dùng yêu cầu.</li>
+<li><strong>Thiết lập và tiến độ:</strong> ngôn ngữ, tùy chọn, danh sách công việc và trạng thái xử lý để tiện ích vận hành.</li>
+</ul>
+<h2>3. Cách sử dụng thông tin</h2>
+<p>Thông tin được sử dụng để xác thực người dùng, xác định quyền Free/PRO, áp dụng hạn mức sử dụng, hỗ trợ thao tác tự động hóa trên GHN, hiển thị kết quả và duy trì thiết lập của tiện ích. Tiện ích không được thiết kế để phục vụ quảng cáo theo hành vi hoặc đánh giá tín dụng.</p>
+<h2>4. Lưu trữ và dịch vụ bên ngoài</h2>
+<p>Một phần thông tin phiên đăng nhập, thiết lập và trạng thái tác vụ được lưu trong bộ nhớ cục bộ của Chrome dành cho tiện ích (<code>chrome.storage.local</code>). GHN AutoOps kết nối tới Supabase để xác thực, làm mới phiên, kiểm tra bản quyền và ghi nhận lượt sử dụng. Khi thao tác trên hệ thống GHN, dữ liệu nghiệp vụ được xử lý trong ngữ cảnh trang GHN và chịu sự điều chỉnh của chính sách liên quan của GHN.</p>
+<p>Việc truyền thông tin xác thực và yêu cầu License đến Supabase được thực hiện qua kết nối HTTPS. Người dùng nên bảo vệ tài khoản Google và thiết bị của mình.</p>
+<h2>5. Chia sẻ dữ liệu</h2>
+<p>Dữ liệu cần thiết cho việc xác thực và quản lý License được gửi tới hạ tầng Supabase phục vụ GHN AutoOps. Các thao tác nghiệp vụ diễn ra trên hệ thống GHN theo yêu cầu của người dùng. GHN AutoOps không tuyên bố là đại diện của GHN. Chúng tôi không chủ đích bán dữ liệu cá nhân hoặc sử dụng dữ liệu cho quảng cáo nhắm mục tiêu.</p>
+<h2>6. Quyền truy cập của tiện ích</h2>
+<p>GHN AutoOps sử dụng các quyền Chrome cần thiết cho việc nhận diện tab GHN, tương tác với giao diện, nhập liệu tự động, lưu thiết lập, hiển thị thông báo và xác thực tài khoản. Quyền <code>debugger</code> được dùng cho thao tác nhập liệu/bàn phím trên trang GHN khi người dùng thực hiện tác vụ.</p>
+<h2>7. Thời gian lưu trữ và quyền của người dùng</h2>
+<p>Thông tin cục bộ có thể được lưu cho đến khi người dùng đăng xuất, xóa dữ liệu tiện ích hoặc gỡ cài đặt; một số trạng thái công việc có thể được giữ lại để hỗ trợ tiếp tục hoặc kiểm tra kết quả. Dữ liệu tài khoản, bản quyền và nhật ký sử dụng trên Supabase có thể được lưu để vận hành dịch vụ, xử lý hạn mức và hỗ trợ người dùng. Thời hạn lưu cụ thể và yêu cầu xóa dữ liệu máy chủ cần được xác nhận qua địa chỉ hỗ trợ bên dưới.</p>
+<p>Người dùng có thể đăng xuất trong tiện ích, xóa dữ liệu tiện ích trên Chrome, hoặc liên hệ nhà phát hành để hỏi về dữ liệu tài khoản và yêu cầu xem xét xóa dữ liệu thuộc phạm vi quản lý của GHN AutoOps.</p>
+<h2>8. Bảo mật</h2>
+<p>Chúng tôi sử dụng cơ chế xác thực tài khoản và kết nối HTTPS cho các yêu cầu API. Không có phương thức kỹ thuật nào bảo đảm an toàn tuyệt đối; người dùng không nên chia sẻ thông tin đăng nhập hoặc cấp quyền truy cập thiết bị cho người không tin cậy.</p>
+<h2>9. Thay đổi chính sách</h2>
+<p>Chính sách có thể được cập nhật khi chức năng, cách xử lý dữ liệu hoặc yêu cầu pháp lý thay đổi. Ngày cập nhật sẽ được ghi ở đầu trang.</p>
+<h2>10. Liên hệ</h2>
+<p>Nhà phát hành: <strong>GHN AutoOps</strong><br>
+Email hỗ trợ: <strong><mark>ghnautoops.support@gmail.com</mark></strong></p>
+</main></body></html>
